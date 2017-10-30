@@ -1,0 +1,41 @@
+ <!DOCTYPE html> 
+ <html> 
+ 	<head> 
+ 	<script type="text/javascript"> 
+  
+ var A_grade = new Array(90,80,50,40,10); 
+ var B_grade = new Array(90,30,100,50,50); 
+ var C_grade = new Array(20,30,60,50,20); 
+  
+ function sum(val) { 
+ 	var sum = 0; 
+ 	for(var i=0; i<5; i++) 
+ 		sum += val[i]; 
+ 	return sum; 
+ } 
+ function avg(val) { 
+ 	var avg = 0; 
+ 	avg = sum(val) / 5; 
+ 	return avg; 
+ } 
+ function max(val) {  
+ 	var max = 0; 
+ 	for(var i=0; i<5; i++) 
+ 		max = (max >= val[i]) ? max : val[i]; 
+ 	return max; 
+ } 
+ function min(val) { 
+ 	var min = 100; 
+ 	for(var i=0; i<5; i++) 
+ 		min = (min >= val[i]) ? val[i] : min; 
+ 	return min; 
+ } 
+  
+ console.log('A 학생의 평균 점수는 ' + avg(A_grade) + ' , 최고점수는 ' + max(A_grade) + ' , 최하 점수는 ' + min(A_grade) + ' 입니다.'); 
+ console.log('B 학생의 평균 점수는 ' + avg(B_grade) + ' , 최고점수는 ' + max(B_grade) + ' , 최하 점수는 ' + min(B_grade) + ' 입니다.'); 
+ console.log('C 학생의 평균 점수는 ' + avg(C_grade) + ' , 최고점수는 ' + max(C_grade) + ' , 최하 점수는 ' + min(C_grade) + ' 입니다.'); 
+ 	</script> 
+ 	</head> 
+ 	<body> 
+ 	</body> 
+</html> 
