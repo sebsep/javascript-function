@@ -1,0 +1,40 @@
+ <!DOCTYPE html> 
+ <html> 
+ 	<script type="text/javascript"> 
+ var A_grade = new Array(10,8); 
+ var B_grade = new Array(1,2); 
+ var C_grade = new Array(9,5); 
+  
+ function sumGrade(Grade){ 
+ 	var result = "" 
+ 	for(var i=0; i<Grade[0]+Grade[1]; i++) 
+ 		result += "*"; 
+ 	for(i=0; i<20-Grade[0]-Grade[1]; i++) 
+ 		result += "_"; 
+ 	return result; 
+ } 
+ function midGrade(mid){ 
+ 	var result = ""; 
+ 	for(var i=0; i<mid; i++) 
+ 		result += "*"; 
+ 	for(i=0; i<10-mid; i++) 
+ 		result += "_"; 
+ 	return result; 
+ } 
+ function endGrade(end){ 
+ 	var result = ""; 
+ 	for(var i=0; i<end; i++) 
+ 		result += "*"; 
+ 	for(i=0; i<10-end; i++) 
+ 		result += "_"; 
+ 	return result; 
+ } 
+  
+ console.log(midGrade(A_grade[0]) + " + " + endGrade(A_grade[1]) + " = " + sumGrade(A_grade)); 
+ console.log(midGrade(B_grade[0]) + " + " + endGrade(B_grade[1]) + " = " + sumGrade(B_grade)); 
+ console.log(midGrade(C_grade[0]) + " + " + endGrade(C_grade[1]) + " = " + sumGrade(C_grade)); 
+ 	</script> 
+ 		</head> 
+ 	<body> 
+ 	</body> 
+</html> 
