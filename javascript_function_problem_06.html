@@ -1,0 +1,45 @@
+ <!DOCTYPE html> 
+ <html> 
+ 	<head> 
+ 	<script type="text/javascript"> 
+ function print_scores_chart() { 
+ 	var result = ''; 
+ 	var max = 0; 
+ 	var min = 9; 
+  
+ 	for(i=0; i<arguments.length; i++) 
+ 		result += "-"; 
+ 	result += '\n'; 
+ 	for(i=0; i<arguments.length; i++)  
+ 		max = (max > arguments[i]) ? max : arguments[i]; 
+ 	for(i=0; i<arguments.length; i++) 
+ 		min = (min < arguments[i]) ? min : arguments[i]; 
+ 	for(i=0; i<10; i++) { 
+ 		for(j=0; j<arguments.length; j++) { 
+ 			if(arguments[j] >= 10-i) 
+ 				result += "*"; 
+ 			else 
+ 				result += " "; 
+ 		} 
+ 		if(10-i == max) 
+ 			result += " <- max"; 
+ 		if(10-i == min) 
+ 			result += " <- min"; 
+  
+ 		result += '\n'; 
+ 	} 
+ 	for(i=0; i<arguments.length; i++) 
+ 		result += "-"; 
+ 	if(min == 0) 
+ 		result += " <- min"; 
+ 	console.log(result); 
+ } 
+  
+ print_scores_chart(1, 2, 3, 4, 5); 
+ print_scores_chart(10, 1, 10, 1, 5, 5); 
+ print_scores_chart(5, 2, 0, 9, 3, 5, 9); 
+ 	</script> 
+ 	</head> 
+ 	<body> 
+ 	</body> 
+ </html> 
