@@ -1,0 +1,31 @@
+ <!DOCTYPE html> 
+ <html> 
+ 	<head> 
+ 	<script type="text/javascript"> 
+ function print_fizz_buzz() { 
+ 	var result = ""; 
+ 	for(var i = 1; i <= 100; i++){ 
+ 		if(i % 15 == 0){ 
+ 			result = i + " : fizzbuzz" + '\n'; 
+ 			console.log(result); 
+ 		} 
+ 		else if(i % 5 == 0){ 
+ 			result = i + " : buzz" + '\n'; 
+ 			console.log(result); 
+ 		} 
+ 		else if(i % 3 == 0){ 
+ 			result = i + " : Fizz" + '\n'; 
+ 			console.log(result); 
+ 		} 
+ 		else { 
+ 			result = i + " : " + i + '\n'; 
+ 			console.log(result); 
+ 		} 
+ 	} 
+ } 
+ print_fizz_buzz(); 
+ 	</script> 
+ </head> 
+ <body> 
+ </body> 
+ </html> 
